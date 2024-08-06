@@ -18,17 +18,17 @@ public class LoginTest extends BaseClass{
 		reportInit();
 		lp= new LoginPage(driver);
 	}
-	@Test
+	@Test(groups = "sanity")
 	public void test01() {
 		lp.loginToApplication("kiran@gmail.com", "123456");
 		Assert.assertEquals(driver.getTitle(), "JavaByKiran | Dashboard");
 	}
-	@Test
+	@Test(groups = "sanity")
 	public void test02() {
 		Assert.assertEquals(driver.getTitle(), "JavaByKiran | Dashboard1");
 		
 	}
-	@Test
+	@Test(groups = "sanity")
 	public void test03() {
 		 throw new SkipException("Skiping testcase");
 	}

@@ -217,3 +217,15 @@
 2024-07-12 17:06:42,586 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-js_en.ftl"): Not found
 2024-07-12 17:06:42,587 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-js.ftl"): Found
 2024-07-12 17:06:42,587 DEBUG [main] cache:45 - Loading template for "commons/commons-inject-js.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Lenovo/.m2/repository/com/aventstack/extentreports/5.0.8/extentreports-5.0.8.jar!/com/aventstack/extentreports/templates/commons/commons-inject-js.ftl"
+2024-07-24 11:11:43,794  INFO [main] BaseClass:25 - Reading property file for browser
+2024-07-24 15:45:09,135  INFO [main] BaseClass:25 - Reading property file for browser
+2024-07-24 19:15:59,006  INFO [main] BaseClass:25 - Reading property file for browser
+2024-07-24 19:20:22,955  INFO [main] BaseClass:25 - Reading property file for browser
+2024-07-24 19:22:44,502  INFO [main] BaseClass:25 - Reading property file for browser
+2024-07-24 19:24:12,601  INFO [main] BaseClass:25 - Reading property file for browser
+2024-07-24 19:47:25,334  INFO [main] BaseClass:25 - Reading property file for browser
+2024-07-24 19:48:21,320  INFO [main] BaseClass:25 - Reading property file for browser
+2024-07-24 20:48:45,304  INFO [main] BaseClass:25 - Reading property file for browser
+2024-07-25 16:30:48,761  INFO [main] BaseClass:25 - Reading property file for browser
+2024-07-25 16:30:53,240  INFO [main] BaseClass:25 - Reading property file for browser
+2024-07-25 16:30:56,389  INFO [main] BaseClass:25 - Reading property file for browser
