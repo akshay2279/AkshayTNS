@@ -1,10 +1,21 @@
 package com.base;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.time.Duration;
+
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterClass;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -41,10 +52,47 @@ public class BaseClass {
 		
 	}
 	
+	public void waitforElementToAppear(By findby)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(findby));
+	}
+	
 	public void reportInit() {
 		report = new ExtentReports();
 		spark = new ExtentSparkReporter(System.getProperty("user.dir")+"/target/ExtentReports.html");
 		report.attachReporter(spark);
+	}
+	
+	public void screenshotUtils() throws IOException
+	{
+		 // Taking a screenshot
+        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+        // Define the destination file path
+        File destinationFile = new File("path/to/save/screenshot.png");
+
+        // Copy the screenshot to the destination file
+        Files.copy(screenshot.toPath(), destinationFile.toPath());
+
+        System.out.println("Screenshot saved to: " + destinationFile.getAbsolutePath());
+
+	}
+	
+	public void mouseHover()
+	{
+        // Locate the element to hover over
+       // WebElement elementToHover = driver.findElement(By.id("hoverElementId"));
+
+        // Create an instance of Actions class
+        Actions actions = new Actions(driver);
+
+        // Perform the hover action
+      //  actions.moveToElement(elementToHover).perform();
+
+        // Optionally, you can perform additional actions like clicking on a sub-element
+        WebElement subElement = driver.findElement(By.id("subElementId"));
+        actions.moveToElement(subElement).click().perform();
 	}
 	
     @AfterSuite 

@@ -1,32 +1,31 @@
 package com.tests;
 
-import org.testng.Assert;
-import org.testng.SkipException;
+
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-
 import com.base.BaseClass;
-import com.pages.HomePage;
+import com.pages.ProductCheckoutPage;
 import com.pages.LoginPage;
-import com.pages.AccountCreationPage;
 
-public class HomeTest extends BaseClass{
+
+public class ProductCheckoutTest extends BaseClass{
 
 	LoginPage lp=null;
-	HomePage hp=null;
+	ProductCheckoutPage hc=null;
 	
 	@BeforeSuite
 	public void setup()throws Exception {
 		initialization();
 		reportInit();
-		hp= new HomePage(driver);
-		//lp= new LoginPage(driver);
+		hc= new ProductCheckoutPage(driver);
+		lp= new LoginPage(driver);
 
 	}
 	@Test
-	public void test01() {
-		hp = lp.validLogin();
-		hp.productselection();
+	public void test01() throws Exception {
+		 lp.validLogin01();
+          hc.productselection();
+
 	
 		//Assert.assertEquals(driver.getTitle(), "JavaByKiran | Dashboard");
 	}

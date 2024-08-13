@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
+
 
 import com.utilities.ExcelUtils;
 
@@ -38,7 +38,7 @@ public class LoginPage  {
 	
 	public void validLogin01() throws Exception
 	{
-		signinLoginBtn.click();
+		signinBtn.click();
 		username.clear();
 		username.sendKeys(ExcelUtils.readCelData(1, 0));
 		password.clear();
@@ -46,12 +46,12 @@ public class LoginPage  {
 		signinLoginBtn.click();
 	}
 	
-	public HomePage validLogin() {
-		username.sendKeys("akshay.wanjari03@gmail.com");
-		password.sendKeys("Akshay@7729");
-		signinLoginBtn.click();
-		return new HomePage(driver);
-	}
+//	public HomePage validLogin() {
+//		username.sendKeys("akshay.wanjari03@gmail.com");
+//		password.sendKeys("Akshay@7729");
+//		signinLoginBtn.click();
+//		return new HomePage(driver);
+//	}
 	
 	public void loginToApplication(String uname, String pass) {
 		
